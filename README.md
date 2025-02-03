@@ -2,4 +2,10 @@
 winter 2025
 # Topics 
 - introduction
-  - fdfs
+ - project goal
+- Model
+  - strcutre
+  - Data
+  -Results
+- Conclusion
+- How to run
