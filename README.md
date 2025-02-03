@@ -9,8 +9,12 @@ winter 2025
 - Design
   - strcutre
   - Data
+  - Prediction Model
+  - Strategy Model
   -Results
+   - Comprasion to previous work
 - Conclusion
+- Future work
 - How to run
 - Ethics statement
   # Introduction
@@ -55,5 +59,57 @@ dataset of approximately 2,600 samples, albeit with some imbalance due to simila
 Standard preprocessing steps like feature scaling and encoding categorical data were applied. 
 Additionally, we stratified the data to create balanced subsets and used linear interpolation to 
 generate extra training samples, ensuring better model generalization. 
+## Prediction Model
+This model is a multi-input deep learning system that integrates categorical, numerical, and 
+sequential data using embeddings, BiLSTMs, and attention mechanisms. It processes pit stop 
+and tire sequences separately before merging all inputs through dense layers to generate the 
+final prediction, utilizing a hybrid MSE-L1 loss function with epoch-based warm-up. 
+![image](https://github.com/user-attachments/assets/a0e70516-bb6c-419d-98a6-86ed721ac7f5)
+
+## Strategy Model
+The model encodes categorical and numerical inputs, combining them into a unified 
+representation. It then branches into three heads to predict pit stop likelihood, timing, and tire 
+choice. Training uses adaptive optimization, mixup augmentation, and a cyclic learning rate, 
+optimizing position changes while enforcing stint length, tire diversity, and pit timing 
+constraints. 
+![image](https://github.com/user-attachments/assets/091f1ca7-ab99-421b-8257-a7ce7468560d)
+# Results
+##  Prediction Model
+![image](https://github.com/user-attachments/assets/527081b0-b6c9-4c50-a456-601500255614)
+![image](https://github.com/user-attachments/assets/0e24e43d-0b3c-496f-9d32-6d30fff13245)
+The model demonstrates moderate accuracy, but there is room for improvement. The RMSE for both the test and validation sets remains around 4.
+## Strategy Model
+![image](https://github.com/user-attachments/assets/0ab0c694-5d08-4682-a6d0-4395526b95b2)
+The loss function does not exhibit a downward trend, suggesting that the model struggles to optimize its strategy over time. As a result, position gains remain stagnant.
+![image](https://github.com/user-attachments/assets/6cec0327-17e5-46e1-bcb0-430996932bdf)
+The generated strategies favour medium tire compounds and lack diversity. While the model reasonably predicts the number of pit stops—where more stops generally indicate a suboptimal strategy—the timing of these stops is overly clustered around the middle of the race.
+Although the generated strategies align somewhat with real-world data, their limited variation is a concern. Furthermore, the position prediction model’s inaccuracies make it difficult to reliably assess the effectiveness of these strategies.
+## Comprasion to previous work
+Fatima et al. (2023), whose work we built upon, focus on predicting final race positions rather than position improvement, achieving superior results with an RMSE of 2 on the test set. Their strategy generation approach, like ours, primarily considers common pit stop strategies and addresses only tire-related pit stops. A key distinction is their use of per-lap data, enabling both pre-race and real-time strategy analysis, whereas our model is limited to pre-race strategy planning. However, their article does not include results for their strategy generation model.
+# Conclusion
+## Prediction Model
+The model has decent performance, yielding reasonable predictions in most cases. Data preprocessing, augmentation, and the use of appropriate loss functions have further improved the predictions.
+Despite exploring various architectures—including transformers, RNNs, and ensemble models with adaptive weights—the test RMSE remained around 4. While further architectural improvements may help, data quality appears to be the primary limiting factor.
+## Strategy Model
+The strategy model generates valid but overly conservative strategies, favouring standard pit stop patterns. Removing constraints led to unrealistic results, such as excessive pit stops and rare tire choices, indicating overfitting to infrequent scenarios rather than effective generalization.
+A more adaptive architecture is needed to generate realistic and diverse strategies that better reflect real-world decision-making.
+# Future work
+Our research lays a strong foundation for AI-driven motorsport strategy modelling, but key improvements are necessary:
+•	Data: Pit stop strategies are influenced by unpredictable events such as accidents and driver positioning, which our model does not account for. Future improvements should prioritize data preprocessing and incorporate per-lap data for a more accurate representation of race dynamics.
+•	Model Architecture: While position prediction shows promise, fine-tuning is needed. The strategy model requires a fundamental redesign, with reinforcement learning as a promising direction for continuous strategy optimization.
+As AI-driven strategy models gain traction in motorsports—such as those used by Mercedes—and as more data is collected, our approach has the potential to become even more accurate and valuable with further refinement.
+# How to run
+
+# Ethical statement 
+Stakeholders: Formula 1 teams, fans, broadcasters and commentators.
+Implications: Teams can optimize performance and race strategies, though over-reliance may limit human adaptability. Broadcasters and commentators can enhance analysis, enriching the fan experience with deeper insights.
+Ethical Considerations: Unequal access to the model could create unfair advantages. To maintain fairness, it should be either universally accessible or regulated to preserve the sport’s integrity. 
+
+
+
+
+
+
+
 
 
