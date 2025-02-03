@@ -103,10 +103,22 @@ Our research lays a strong foundation for AI-driven motorsport strategy modellin
 •	Model Architecture: While position prediction shows promise, fine-tuning is needed. The strategy model requires a fundamental redesign, with reinforcement learning as a promising direction for continuous strategy optimization.
 As AI-driven strategy models gain traction in motorsports—such as those used by Mercedes—and as more data is collected, our approach has the potential to become even more accurate and valuable with further refinement.
 # How to run
-## 1. Clone the repository:
+## Clone the repository:
 ```
-git clone https://github.com/reuvensm/Emotion-Detection-Using-EmotionGAN
-```
+git clone https://github.com/yanirVZ/deep_project
+``` 
+## Run the models 
+### With existing data sets
+RUN PitStopStartegy_Model for pitstops strategy generation
+RUN Pos_Improve_Pred_Model for position improvement predictions
+The models are saved to checkpoints directory
+### With new data sets 
+RUN obtain_data to extract the features and targets using fastf1 libary. Change the variable "year" to the desired year, extracting data from several years in one run is unstable.
+RUN process_data to combine the features and targets from different years and create mappings of the categorical features. 
+The data sets are saved to data directory, and the mappings of the categorical features are saved to data/mappings directory.
+RUN PitStopStartegy_Model for pitstops strategy generation
+RUN Pos_Improve_Pred_Model for position improvement predictions
+The models are saved to checkpoints directory
 # Ethical statement 
 Stakeholders: Formula 1 teams, fans, broadcasters and commentators.
 Implications: Teams can optimize performance and race strategies, though over-reliance may limit human adaptability. Broadcasters and commentators can enhance analysis, enriching the fan experience with deeper insights.
