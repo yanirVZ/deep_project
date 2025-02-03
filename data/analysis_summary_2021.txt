@@ -1,0 +1,10 @@
+Dataset Analysis Summary
+==================================================
+
+Total races: 19
+Total drivers: 21
+Years covered: 2021 to 2021
+
+Missing Data Analysis:
+QualifyingPosition    1
+Q1Time                4

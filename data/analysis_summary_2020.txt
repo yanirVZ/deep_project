@@ -1,0 +1,9 @@
+Dataset Analysis Summary
+==================================================
+
+Total races: 16
+Total drivers: 23
+Years covered: 2020 to 2020
+
+Missing Data Analysis:
+Q1Time    1

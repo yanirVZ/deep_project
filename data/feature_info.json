@@ -1,0 +1,27 @@
+{
+    "numerical_features": [
+        "Round",
+        "GridPosition",
+        "NumParticipants",
+        "NumPitStops",
+        "AirTemp",
+        "Humidity",
+        "Pressure",
+        "TrackTemp",
+        "WindDirection",
+        "WindSpeed",
+        "Q1Time",
+        "Laps"
+    ],
+    "categorical_features": [
+        "Season_encoded",
+        "Circuit_encoded",
+        "Team_encoded",
+        "Driver_encoded",
+        "TyreCompounds_encoded",
+        "PitStopLaps"
+    ],
+    "target_columns": [
+        "ClassificationResult"
+    ]
+}
