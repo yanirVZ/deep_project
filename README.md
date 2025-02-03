@@ -1,8 +1,11 @@
 # 046211 - STOP FOR THE WIN 
 winter 2025
 # Topics 
-- introduction
-  - project goal
+- Introduction
+  - project objective
+  - Motivation
+  - Previous Work
+  - Strategy  
 - Model
   - strcutre
   - Data
@@ -34,4 +37,5 @@ issues are unpredictable, we focus on tire-related strategies, analysing:
 1. The number of pit stops per race 
 2. The tire compounds used 
 3. The laps on which pit stops occur  
-This approach aims to achieve a targeted and effective pit stop strategy model. 
+This approach aims to achieve a targeted and effective pit stop strategy model.
+
