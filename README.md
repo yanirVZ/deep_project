@@ -120,9 +120,12 @@ RUN PitStopStartegy_Model for pitstops strategy generation
 RUN Pos_Improve_Pred_Model for position improvement predictions
 The models are saved to checkpoints directory
 # Ethical statement 
-Stakeholders: Formula 1 teams, fans, broadcasters and commentators.
-Implications: Teams can optimize performance and race strategies, though over-reliance may limit human adaptability. Broadcasters and commentators can enhance analysis, enriching the fan experience with deeper insights.
-Ethical Considerations: Unequal access to the model could create unfair advantages. To maintain fairness, it should be either universally accessible or regulated to preserve the sport’s integrity. 
+## Stakeholders: 
+Formula 1 teams, fans, broadcasters and commentators.
+## Implications: 
+Teams can optimize performance and race strategies, though over-reliance may limit human adaptability. Broadcasters and commentators can enhance analysis, enriching the fan experience with deeper insights.
+## Ethical Considerations: 
+Unequal access to the model could create unfair advantages. To maintain fairness, it should be either universally accessible or regulated to preserve the sport’s integrity. 
 # References
 Fatima, S. S. W., & Johrendt, J. (2023). Deep-Racing: An Embedded Deep Neural Network (EDNN) Model to Predict the Winning Strategy in Formula One Racing. International Journal of Machine Learning, 13(3), 97-103. doi: 10.18178/ijml.2023.13.3.1135
 
