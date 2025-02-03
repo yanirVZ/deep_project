@@ -6,7 +6,7 @@ winter 2025
   - Motivation
   - Previous Work
   - Strategy  
-- Model
+- Design
   - strcutre
   - Data
   -Results
@@ -38,4 +38,22 @@ issues are unpredictable, we focus on tire-related strategies, analysing:
 2. The tire compounds used 
 3. The laps on which pit stops occur  
 This approach aims to achieve a targeted and effective pit stop strategy model.
+# Design
+## Structure
+![image](https://github.com/user-attachments/assets/f032468c-07e6-4714-a3ec-c8dd5006fd41)
+## Data
+In Formula 1, a wealth of data is available at both the race and lap levels. However, because 
+our focus is on tire-related pit stop strategies, we assumed that per-race data would suffice, 
+and that the additional complexity of per-lap data was unnecessary. 
+###  Sorting the Data
+We began by identifying key variables such as race location, weather, driver and team 
+identities, grid positions, and pit stop details (number, tire compounds, and pit stop laps). 
+Using the fastf1 Python library, we collected data from the 2018–2024 seasons and filtered 
+out entries with unusually long pit stops (indicating non-tire-related stops). This resulted in a 
+dataset of approximately 2,600 samples, albeit with some imbalance due to similar strategies.
+###  Preprocessing the Data
+Standard preprocessing steps like feature scaling and encoding categorical data were applied. 
+Additionally, we stratified the data to create balanced subsets and used linear interpolation to 
+generate extra training samples, ensuring better model generalization. 
+
 
