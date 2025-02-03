@@ -1,0 +1,10 @@
+{
+    "HARD": 0,
+    "HYPERSOFT": 1,
+    "INTERMEDIATE": 2,
+    "MEDIUM": 3,
+    "SOFT": 4,
+    "SUPERSOFT": 5,
+    "ULTRASOFT": 6,
+    "WET": 7
+}
