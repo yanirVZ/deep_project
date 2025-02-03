@@ -1,4 +1,6 @@
 # 046211 - STOP FOR THE WIN 
+Yanir Vaisman Zancho, Eran Cohen
+Technion ECE faculty deep learning project 
 winter 2025
 # Topics 
 - Introduction
