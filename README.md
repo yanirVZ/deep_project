@@ -17,6 +17,7 @@ winter 2025
 - Future work
 - How to run
 - Ethics statement
+- References
   # Introduction
 ## Project Objective 
 This project aims to develop an optimized pit stop strategy for Formula 1, to improve final 
@@ -44,7 +45,9 @@ issues are unpredictable, we focus on tire-related strategies, analysing:
 This approach aims to achieve a targeted and effective pit stop strategy model.
 # Design
 ## Structure
-![image](https://github.com/user-attachments/assets/f032468c-07e6-4714-a3ec-c8dd5006fd41)
+The goal is to develop a pit stop strategy generation model (referred to as the "strategy model") that leverages a pre-trained position improvement model (the "prediction model"). 
+![image](https://github.com/user-attachments/assets/4e4ce3e9-3395-46f3-8f46-e8ec0fb9319d)
+
 ## Data
 In Formula 1, a wealth of data is available at both the race and lap levels. However, because 
 our focus is on tire-related pit stop strategies, we assumed that per-race data would suffice, 
@@ -76,7 +79,6 @@ constraints.
 # Results
 ##  Prediction Model
 ![image](https://github.com/user-attachments/assets/527081b0-b6c9-4c50-a456-601500255614)
-![image](https://github.com/user-attachments/assets/0e24e43d-0b3c-496f-9d32-6d30fff13245)
 The model demonstrates moderate accuracy, but there is room for improvement. The RMSE for both the test and validation sets remains around 4.
 ## Strategy Model
 ![image](https://github.com/user-attachments/assets/0ab0c694-5d08-4682-a6d0-4395526b95b2)
@@ -104,6 +106,8 @@ As AI-driven strategy models gain traction in motorsports—such as those used b
 Stakeholders: Formula 1 teams, fans, broadcasters and commentators.
 Implications: Teams can optimize performance and race strategies, though over-reliance may limit human adaptability. Broadcasters and commentators can enhance analysis, enriching the fan experience with deeper insights.
 Ethical Considerations: Unequal access to the model could create unfair advantages. To maintain fairness, it should be either universally accessible or regulated to preserve the sport’s integrity. 
+# References
+Fatima, S. S. W., & Johrendt, J. (2023). Deep-Racing: An Embedded Deep Neural Network (EDNN) Model to Predict the Winning Strategy in Formula One Racing. International Journal of Machine Learning, 13(3), 97-103. doi: 10.18178/ijml.2023.13.3.1135
 
 
 
