@@ -104,8 +104,9 @@ Our research lays a strong foundation for AI-driven motorsport strategy modellin
 As AI-driven strategy models gain traction in motorsports—such as those used by Mercedes—and as more data is collected, our approach has the potential to become even more accurate and valuable with further refinement.
 # How to run
 ## 1. Clone the repository:
-```git clone https://github.com/reuvensm/Emotion-Detection-Using-EmotionGAN
-
+```
+git clone https://github.com/reuvensm/Emotion-Detection-Using-EmotionGAN
+```
 # Ethical statement 
 Stakeholders: Formula 1 teams, fans, broadcasters and commentators.
 Implications: Teams can optimize performance and race strategies, though over-reliance may limit human adaptability. Broadcasters and commentators can enhance analysis, enriching the fan experience with deeper insights.
