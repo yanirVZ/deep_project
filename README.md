@@ -14,7 +14,7 @@ winter 2025
 - Results
   - Prediction Model
   - Strategy Model
- - Comprasion to previous work
+  - Comprasion to previous work
 - Conclusion
 - Future work
 - How to run
